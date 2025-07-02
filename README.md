@@ -9,9 +9,9 @@ CraftBuddy is a web app that can help with a variety of crafting and resource ma
 This repository contains an environment and docker compose script for deploying the entire CraftBuddy app. The docker compose script deploys containers for the frontend, backend, and a reverse proxy nginx instance. The nginx reverse proxy passes API requests (addresses starting with `/api`) to the backend server, while any other requests are passed to the frontend.
 
 The CraftBuddy project consists of the following repositories:
-* [craftbuddy-frontend](https://github.com/JFarNTIG/craftbuddy-frontend), frontend server built with React + Vite.
-* [craftbuddy-backend](https://github.com/JFarNTIG/craftbuddy-backend), backend API server built with Flask.
-* [craftbuddy](https://github.com/JFarNTIG/craftbuddy), environment and docker compose script for deploying the CraftBuddy app
+* [CraftBuddy-frontend](https://github.com/JFarNTIG/CraftBuddy-frontend), frontend server built with React + Vite.
+* [CraftBuddy-backend](https://github.com/JFarNTIG/CraftBuddy-backend), backend API server built with Flask.
+* [CraftBuddy](https://github.com/JFarNTIG/CraftBuddy), environment and docker compose script for deploying the CraftBuddy app
 
 CraftBuddy also depends on [crafterlib](https://github.com/JFarNTIG/crafterlib), a Python library that provides game item and recipe data and has a variety of functions for crafting-related math.
 
@@ -23,7 +23,7 @@ Otherwise, follow the instructions below to deploy the CraftBuddy app with all s
 
 Clone the repository, making sure to also clone submodules:
 ```
-git clone --recurse-submodules https://github.com/JFarNTIG/craftbuddy && cd craftbuddy
+git clone --recurse-submodules https://github.com/JFarNTIG/CraftBuddy && cd CraftBuddy
 ```
 
 Run the docker compose script:
