@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: backend
+      target: runtime
+    restart: always
+    networks:
+      - frontnet
+    expose:
+      - "8000"
+  
+  frontend:
+    build:
+      context: frontend
+      target: runtime
+    restart: always
+    networks:
+      - frontnet
+    expose:
+      - "80"
+  
+  proxy:
+    build: proxy
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - frontnet
+
+networks:
+  frontnet:
